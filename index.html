@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Flujo Vehicular — Avenida X</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__tag">Análisis de Sistemas</div>
+    <h1 class="hero__title">Sistema de Flujo Vehicular</h1>
+    <p class="hero__subtitle">Avenida X — Estudio desde el pensamiento sistémico</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Propósito -->
+    <section class="card" id="proposito">
+      <div class="card__number">01</div>
+      <h2 class="card__title">Propósito del Sistema</h2>
+      <p class="card__text">
+        Facilitar el movimiento de vehículos y personas a lo largo de la Avenida X
+        de manera <strong>eficiente</strong> y <strong>segura</strong>.
+      </p>
+    </section>
+
+    <!-- Fronteras -->
+    <section class="card card--split" id="fronteras">
+      <div class="card__number">02</div>
+      <h2 class="card__title">Fronteras del Sistema</h2>
+      <div class="split">
+        <div class="split__col split__col--inside">
+          <h3>Dentro del sistema</h3>
+          <ul id="list-inside"></ul>
+        </div>
+        <div class="split__col split__col--outside">
+          <h3>Fuera del sistema</h3>
+          <ul id="list-outside"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Componentes -->
+    <section class="card" id="componentes">
+      <div class="card__number">03</div>
+      <h2 class="card__title">Componentes Clave</h2>
+      <div class="chips" id="chips-componentes"></div>
+    </section>
+
+    <!-- Entradas / Salidas -->
+    <section class="card card--io" id="io">
+      <div class="card__number">04</div>
+      <h2 class="card__title">Entradas y Salidas</h2>
+      <div class="io-grid">
+        <div class="io-col">
+          <h3>⬇ Inputs</h3>
+          <ul id="list-inputs"></ul>
+        </div>
+        <div class="io-arrow">⇄</div>
+        <div class="io-col">
+          <h3>⬆ Outputs</h3>
+          <ul id="list-outputs"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retroalimentación -->
+    <section class="card" id="feedback">
+      <div class="card__number">05</div>
+      <h2 class="card__title">Retroalimentación</h2>
+      <div class="feedback-grid" id="feedback-grid"></div>
+    </section>
+
+    <!-- Entorno -->
+    <section class="card" id="entorno">
+      <div class="card__number">06</div>
+      <h2 class="card__title">Entorno</h2>
+      <div class="env-grid" id="env-grid"></div>
+    </section>
+
+    <!-- Interacciones -->
+    <section class="card" id="interacciones">
+      <div class="card__number">07</div>
+      <h2 class="card__title">Interacciones y Relaciones</h2>
+      <ol class="interactions-list" id="interactions-list"></ol>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Trabajo práctico · Pensamiento Sistémico · <span id="year"></span></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+</body>
+</html>
