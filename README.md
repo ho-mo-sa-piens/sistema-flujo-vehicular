@@ -1,3 +1,8 @@
+Integrante grupo:
+Celeste Armonia 
+
+
+
 # Sistema de Flujo Vehicular — Avenida X
 
 Trabajo práctico de análisis sistémico. Visualización web del **Sistema de Flujo Vehicular de la Avenida X** aplicando conceptos de pensamiento sistémico.
