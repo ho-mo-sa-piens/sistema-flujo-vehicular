@@ -356,3 +356,142 @@ body {
   color: var(--muted);
   font-size: .85rem;
 }
+//primer prueba de agregar seccion de diagrama visual al sistema
+
+
+/* ── Variables del diagrama ─────────────────────────────────── */
+:root {
+  --diagram-arrow:          #4a90d9;
+  --diagram-feedback:       #e67e22;
+  --diagram-env:            #8e9bae;
+  --diagram-system-bg:      rgba(74, 144, 217, 0.06);
+  --diagram-system-border:  rgba(74, 144, 217, 0.35);
+  --diagram-legend-bg:      rgba(255, 255, 255, 0.7);
+  --diagram-legend-border:  rgba(0, 0, 0, 0.1);
+}
+ 
+/* ── Wrapper responsivo del SVG ─────────────────────────────── */
+.diagram-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+}
+ 
+#system-diagram {
+  display: block;
+  min-width: 500px;
+  width: 100%;
+  height: auto;
+}
+ 
+/* ── Nodos ───────────────────────────────────────────────────── */
+.diag-node {
+  stroke-width: 1.5;
+}
+ 
+.diag-node--input {
+  fill: #e8f5e9;
+  stroke: #4caf50;
+}
+ 
+.diag-node--component {
+  fill: #e3f2fd;
+  stroke: #2196f3;
+}
+ 
+.diag-node--component.diag-node--main {
+  fill: #bbdefb;
+  stroke: #1565c0;
+  stroke-width: 2;
+}
+ 
+.diag-node--output {
+  fill: #fff3e0;
+  stroke: #ff9800;
+}
+ 
+/* ── Texto dentro del SVG ───────────────────────────────────── */
+.diag-text {
+  font-family: inherit, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  fill: #263238;
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+ 
+.diag-text--comp {
+  font-size: 11.5px;
+}
+ 
+.diag-subtext {
+  font-family: inherit, sans-serif;
+  font-size: 10px;
+  fill: #546e7a;
+  text-anchor: middle;
+}
+ 
+.diag-label {
+  font-family: inherit, sans-serif;
+  font-size: 10.5px;
+  fill: #78909c;
+}
+ 
+.diag-label--env {
+  font-size: 11px;
+  font-weight: 700;
+  fill: #8e9bae;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+ 
+.diag-label--system {
+  font-size: 11px;
+  font-weight: 700;
+  fill: #4a90d9;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+ 
+.diag-label--feedback {
+  font-size: 10px;
+  fill: #e67e22;
+  text-anchor: middle;
+}
+ 
+.diag-legend-text {
+  font-family: inherit, sans-serif;
+  font-size: 10.5px;
+  fill: #455a64;
+  dominant-baseline: central;
+}
+ 
+/* ── Flechas ─────────────────────────────────────────────────── */
+.diag-arrow {
+  stroke: var(--diagram-arrow);
+  stroke-width: 1.8;
+}
+ 
+/* ── Card especial para el diagrama ─────────────────────────── */
+.card--diagram {
+  border-top: 3px solid #4a90d9;
+}
+ 
+/* ── Modo oscuro básico (si el proyecto lo agrega en el futuro) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --diagram-system-bg:      rgba(74, 144, 217, 0.08);
+    --diagram-system-border:  rgba(74, 144, 217, 0.4);
+    --diagram-legend-bg:      rgba(30, 30, 30, 0.7);
+    --diagram-legend-border:  rgba(255, 255, 255, 0.1);
+  }
+ 
+  .diag-node--input     { fill: #1b5e20; stroke: #66bb6a; }
+  .diag-node--component { fill: #0d2a4a; stroke: #64b5f6; }
+  .diag-node--component.diag-node--main { fill: #0a2240; stroke: #90caf9; }
+  .diag-node--output    { fill: #3e2000; stroke: #ffb74d; }
+  .diag-text            { fill: #eceff1; }
+  .diag-subtext         { fill: #90a4ae; }
+  .diag-legend-text     { fill: #b0bec5; }
+}
